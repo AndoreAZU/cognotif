@@ -1,0 +1,1 @@
+select id, id_order, id_product, quantity from product_order  where id_order = $1

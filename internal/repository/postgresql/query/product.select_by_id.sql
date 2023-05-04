@@ -1,0 +1,1 @@
+select id, name, price, description, image from product where id = $1

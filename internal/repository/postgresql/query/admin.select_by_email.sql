@@ -1,0 +1,1 @@
+select id, name, email, password from admin where email = $1

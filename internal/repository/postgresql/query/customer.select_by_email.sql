@@ -1,0 +1,1 @@
+select id, name, email, password from customer where email = $1

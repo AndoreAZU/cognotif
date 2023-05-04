@@ -1,0 +1,35 @@
+version: '3.4'
+
+services:
+  postgres:
+    image: postgres
+    container_name: postgres
+    environment:
+      - POSTGRES_USER=cognotif
+      - POSTGRES_PASSWORD=c0gn0t1f
+      - POSTGRES_DB=ecommerce
+    volumes:
+      - ./initdb/00-init-psql.sql:/docker-entrypoint-initdb.d/00-init-psql.sql:ro
+    ports:
+      - "5431:5432"
+    networks:
+      - cognotif
+  mysql:
+    image: mysql
+    container_name: mysql
+    environment:
+      - MYSQL_USER=cognotif
+      - MYSQL_PASSWORD=c0gn0t1f
+      - MYSQL_DATABASE=ecommerce
+      - MYSQL_ROOT_PASSWORD=c0gn0t1f
+    volumes:
+      - ./initdb/00-init-mysql.sql:/docker-entrypoint-initdb.d/00-init-mysql.sql:ro
+    ports:
+      - "3306:3306"
+    networks:
+      - cognotif
+
+
+networks:
+  cognotif:
+    driver: bridge

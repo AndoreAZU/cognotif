@@ -1,0 +1,74 @@
+{
+    "general_error" :{
+        "body": {
+            "message": "There's an unexpected error, please try again"
+        },
+        "status" : 500
+    },
+    "customer_not_exists" :{
+        "body": {
+            "message": "Customer not exists"
+        },
+        "status" : 404
+    },
+    "customer_already_exists" :{
+        "body": {
+            "message": "Customer already exists"
+        },
+        "status" : 400
+    },
+    "bad_request" :{
+        "body": {
+            "message": "Bad request"
+        },
+        "status" : 400
+    },
+    "invalid_credential" :{
+        "body": {
+            "message": "Invalid credential"
+        },
+        "status" : 400
+    },
+    "missing_header_authorization" :{
+        "body": {
+            "message": "Missing header authorization"
+        },
+        "status" : 400
+    },
+    "token_invalid" :{
+        "body": {
+            "message": "Token is invalid"
+        },
+        "status" : 401
+    },
+    "token_expired" :{
+        "body": {
+            "message": "Token was expired"
+        },
+        "status" : 401
+    },
+    "product_not_exist" :{
+        "body": {
+            "message": "Product not exist"
+        },
+        "status" : 404
+    },
+    "admin_forbidden" :{
+        "body": {
+            "message": "Admin cannot access this api"
+        },
+        "status" : 401
+    },
+    "need_admin_access" :{
+        "body": {
+            "message": "Need admin access for this api"
+        },
+        "status" : 401
+    },
+    "order_not_exist" :{
+        "body": {
+            "message": "No data"
+        },
+        "status" : 401
+    }
+}

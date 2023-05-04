@@ -1,0 +1,315 @@
+{
+	"info": {
+		"_postman_id": "bced50a8-1547-4de0-94ab-5308515196a1",
+		"name": "cognotif",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18529019"
+	},
+	"item": [
+		{
+			"name": "register-user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"andreas\",\n    \"email\": \"asdas@asd.asw\",\n    \"password\": \"asdad\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/v1/user",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login-customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"asdas@asd.asw\",\n    \"password\": \"asdad\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/v1/user/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"v1",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login-admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"admin@admin.admin\",\n    \"password\": \"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/v1/admin/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"v1",
+						"admin",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "L_K1YKE8i_qBxd9pgG0SAR2yIaZZZC65oh1KFsuUwZqVkhfKYLN7rSZ62cpkbbkzbV7QMIMAV_Y3X6DOWkups-Xgq6AAXEZ7_Qewd0dEmgm3iyr33syWziASUeVGCK9xAbljGWf0n5i1npeCoQ3sz6voHtp14yMy6Ah-pBhjgUV-LtD6LMmQzoL8RWHXzaIlPE88TvRRaflNBLO8QDzZ9zcZ8StIEZiOTYS6FJc=",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8082/v1/user/profile",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"v1",
+						"user",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-list-product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8082/v1/product",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"v1",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "8OklXbMT3uEUm9W0UBn-N7fEGnPsvQfbnciaH6biK3shtou7FwKUucPW9TIfbdrH8lGvpDXgzozk1FEtBKEiJIREDYOZbZoukwLmL71liYFJXDdTtYWpOn7FVo8SVwBV6aLQypCp6SfE3WDF1Ka7hWCZVCS_KwfCEgJoGKbbXfUkXmhzoaV41yHk8NfagPyTULwTXT26VVvRLFKv8a9SfcwsRw==",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"items\": [\n        {\n            \"id_product\": 1,\n            \"quantity\": 1\n        },\n        {\n            \"id_product\": 2,\n            \"quantity\": 1\n        },\n        {\n            \"id_product\": 3,\n            \"quantity\": 1\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/v1/order",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"v1",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "completing-order",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "KA1gQ3QuuX6E9x_TUdtwqzduu2e_Dw7XGUaeDFYOsvDwRl5aFjNmW--i8k_zu8BmV8tba3qZnOq98lotQ1nur-wvtzRWMUnslTgySgGbgQly60yhAIQCQgIg4jZOoqCXnTmMDkbuRzNNe24mNRseIKgM8oZDuFgzmKH0Vc90ZViEB4Zc4sWVyBeAWROOjnJu1sGBVw_ynnIJNfAL-myKGEvdHg==",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8082/v1/order/complete?id=7b4b4654-f2c2-44f9-8975-ea6082d25353",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"v1",
+						"order",
+						"complete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "7b4b4654-f2c2-44f9-8975-ea6082d25353"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generate-report",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "L3IqZmZ3-y3l1LvpIzIyXsDKh-05dU_GgE7TGOw5oreT50YG7hAsQkuShhNLDrE9IWH-c945B8a08DIDDt4SgAroUB15oFSIv5pgM5bSvP_dNUQVhC0KPOU7iPlSGgFDSP5UjTSjeRM8alfupHylp-j7ZR-jPrMYotb8bqGk2J6rehXGn95vol5WVGoEIOGi5DNa8wjEO_zVTu3FpOM_FWiaKUwlxpwSK5_4NfI=",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8082/v1/admin/order/report",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"v1",
+						"admin",
+						"order",
+						"report"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-order",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "EnLJ9-EHjBHTS_EaOQbwkWy8nGb5gKjGpuLmNYVUiv94RZa8UbJ3OtLeaWv-uZgZPaVjWXn5CKTnSsvyn_j9ii3pVN5JwebjhU0Cg9dx_H80B7V2xiQ3EDLGrh0I1beat3S_VIVsPMFZAmN40ma8U9pC72sLz2rdC0Aijt2cni5QemwCwC7kyFbFWM4hwlCL0jlebKOv4seY6W2wBWf9uHWA1g==",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8082/v1/user/order",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"v1",
+						"user",
+						"order"
+					],
+					"query": [
+						{
+							"key": "id-order",
+							"value": "80174c07-cf66-412a-a2c4-fe03dca2d2da",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": "COMPLETE",
+							"description": "[COMPLETE | PENDING]",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-order-by-admin",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "yBSaLNTk0G-S_ISk2WO8khyjsJWcpgwoh1PbpeXRU8JbSWHQfu-jU7DNtyb-ZPzhnMfHhjMDSvWmlhvmplIch1gYdZwosvRQUi-Yyp8dT8T4623ayPy88qW_fzocvarDrFBPhaZxisRE5N51pTphbU38N-7dnEBXzDU8WwbcNd1e_YIiM8FRjpaLp3TwgFkA-TlMEyrbb9Ylva_We0YZ9cDkxkmmHSbTRfWrTC0=",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8082/v1/admin/order?id-order&status=PENDING",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"v1",
+						"admin",
+						"order"
+					],
+					"query": [
+						{
+							"key": "id-customer",
+							"value": "ac63d092-14d9-4ea7-afee-1d9f4f1b64e7s",
+							"disabled": true
+						},
+						{
+							"key": "id-order",
+							"value": null
+						},
+						{
+							"key": "status",
+							"value": "PENDING",
+							"description": "[PENDING | COMPLETE]"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

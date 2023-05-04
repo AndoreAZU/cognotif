@@ -1,0 +1,1 @@
+insert into orders (id, id_customer, date, status) values ($1,$2,$3,$4)

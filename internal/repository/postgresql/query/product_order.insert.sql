@@ -1,0 +1,1 @@
+insert into product_order (id, id_order, id_product, quantity) values ($1,$2,$3,$4)
